@@ -1,5 +1,5 @@
 .menu {
-  padding: $standard-margin $medium-margin 0;
+  padding: $margin-standard $margin-medium 0;
 }
 
 .menu__list {
@@ -21,11 +21,14 @@
   text-decoration: none;
   font-size: 18px;
   line-height: 1em;
-  margin-right: $medium-margin;
+  font-weight: 400;
+  margin-right: $margin-medium;
   padding: 0 0 15px;
+  transition: box-shadow 200ms;
 
   &--is-active,
-  &:hover {
+  &:hover,
+  &:active {
     box-shadow: inset 0 -3px 0 0 #fff;
   }
 }
