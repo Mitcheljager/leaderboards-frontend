@@ -26,13 +26,19 @@ img {
 }
 
 .wrapper {
-  max-width: $tablet;
+  min-width: $mobile-portrait;
   margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  overflow: hidden;
 }
 
 .content {
   background: #fff;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.15), 0 3px 3px rgba(0,0,0,0.07);
+
+  @media (min-width: $tablet) {
+    padding: 0 calc((100vw - #{$tablet}) / 2) $margin-large;
+  }
 }
 
 .content__title {

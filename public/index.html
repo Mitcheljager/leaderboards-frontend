@@ -6,8 +6,6 @@
   <title>Leaderboards</title>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,300,600,500,200" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link href="/css/layout.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,20 +20,35 @@
             <a href="#" class="menu__link menu__link--is-active">Leaderboards</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link">Duels</a>
+            <a href="#" class="menu__link menu__link">Matches</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link">Match History</a>
           </li>
           <li class="menu__item">
             <a href="#" class="menu__link">Hall of Fame</a>
           </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Players</a>
-          </li>
         </ul>
+        <div class="menu__backdrop"></div>
       </nav>
 
+      <section class="profile">
+        <div class="profile__rank">5<span class="profile__label">th</label></div>
+        <img class="profile__image" src="http://placehold.it/250x250" />
+        <div class="profile__points">14<span class="profile__label">Pts</span></div>
+      </section>
+
+      <div class="menu-trigger js-toggle-menu"><span class="menu-trigger__icon"></span></div>
     </header>
+
     <section class="content">
       <section class="leaderboards">
+        <div class="leaderboards__header">
+          <h1 class="leaderboards__title">Leaderboards</h1>
+          <div class="leaderboards__filter">
+
+          </div>
+        </div>
         <ol class="leaderboards__list">
           <li class="leaderboards-item leaderboards-item--is-highlighted">
             <div class="leaderboards-item__rank">
@@ -43,23 +56,19 @@
             </div>
             <div class="leaderboards-item__profile">
               <img src="http://placehold.it/250x250" class="leaderboards-item__icon" />
-              <span class="leaderboards-item__name">Lena Oxton</span>
+              <div class="leaderboards-item__profile-block">
+                <span class="leaderboards-item__name">Lena Oxton</span>
+                <div class="leaderboards-item__statistics">
+                  <span class="leaderboards-item__statistics-item">Played: <strong>6</strong></span>
+                  <span class="leaderboards-item__statistics-item">Last played: <strong>2 days ago</strong></span>
+                </div>
+              </div>
             </div>
 
             <div class="leaderboards-item__score">
-              <span class="leaderboards-item__games"><span class="leaderboards-item__label">Games</span>23</span>
-              <span class="leaderboards-item__winrate"><span class="leaderboards-item__label">Winrate</span>65%</span>
-              <span class="leaderboards-item__points"><span class="leaderboards-item__label">Score</span>75</span>
-            </div>
-
-            <div class="leaderboards-item__actions">
-              <a class="leaderboards-item__trigger js-toggle-bubble"><div class="leaderboards-item__trigger-icon"></div></a>
-              <div class="leaderboards-item__bubble js-bubble">
-                <div class="leaderboards-item__bubble-content">
-                  <a href="#" class="leaderboards-item__action">View Profile</a>
-                  <a href="#" class="leaderboards-item__action">Request Duel</a>
-                </div>
-              </div>
+              <span class="leaderboards-item__games">23</span>
+              <span class="leaderboards-item__winrate">65%</span>
+              <span class="leaderboards-item__points">75</span>
             </div>
           </li>
 
@@ -69,23 +78,19 @@
             </div>
             <div class="leaderboards-item__profile">
               <img src="http://placehold.it/250x250" class="leaderboards-item__icon" />
-              <span class="leaderboards-item__name">Fareeha Amari</span>
+              <div class="leaderboards-item__profile-block">
+                <span class="leaderboards-item__name">Fareeha Amari</span>
+                <div class="leaderboards-item__statistics">
+                  <span class="leaderboards-item__statistics-item">Played: <strong>5</strong></span>
+                  <span class="leaderboards-item__statistics-item">Last played: <strong>2 days ago</strong></span>
+                </div>
+              </div>
             </div>
 
             <div class="leaderboards-item__score">
-              <span class="leaderboards-item__games"><span class="leaderboards-item__label">Games</span>67</span>
-              <span class="leaderboards-item__winrate"><span class="leaderboards-item__label">Winrate</span>51%</span>
-              <span class="leaderboards-item__points"><span class="leaderboards-item__label">Points</span>73</span>
-            </div>
-
-            <div class="leaderboards-item__actions">
-              <a class="leaderboards-item__trigger js-toggle-bubble"><div class="leaderboards-item__trigger-icon"></div></a>
-              <div class="leaderboards-item__bubble js-bubble">
-                <div class="leaderboards-item__bubble-content">
-                  <a href="#" class="leaderboards-item__action">View Profile</a>
-                  <a href="#" class="leaderboards-item__action">Request Duel</a>
-                </div>
-              </div>
+              <span class="leaderboards-item__games">67</span>
+              <span class="leaderboards-item__winrate">51%</span>
+              <span class="leaderboards-item__points">73</span>
             </div>
           </li>
 
@@ -95,23 +100,19 @@
             </div>
             <div class="leaderboards-item__profile">
               <img src="http://placehold.it/250x250" class="leaderboards-item__icon" />
-              <span class="leaderboards-item__name">Hana Song</span>
+              <div class="leaderboards-item__profile-block">
+                <span class="leaderboards-item__name">Hana Song</span>
+                <div class="leaderboards-item__statistics">
+                  <span class="leaderboards-item__statistics-item">Played: <strong>5</strong></span>
+                  <span class="leaderboards-item__statistics-item">Last played: <strong>3 days ago</strong></span>
+                </div>
+              </div>
             </div>
 
             <div class="leaderboards-item__score">
-              <span class="leaderboards-item__games"><span class="leaderboards-item__label">Games</span>14</span>
-              <span class="leaderboards-item__winrate"><span class="leaderboards-item__label">Winrate</span>47%</span>
-              <span class="leaderboards-item__points"><span class="leaderboards-item__label">Points</span>60</span>
-            </div>
-
-            <div class="leaderboards-item__actions">
-              <a class="leaderboards-item__trigger js-toggle-bubble"><div class="leaderboards-item__trigger-icon"></div></a>
-              <div class="leaderboards-item__bubble js-bubble">
-                <div class="leaderboards-item__bubble-content">
-                  <a href="#" class="leaderboards-item__action">View Profile</a>
-                  <a href="#" class="leaderboards-item__action">Request Duel</a>
-                </div>
-              </div>
+              <span class="leaderboards-item__games">14</span>
+              <span class="leaderboards-item__winrate">47%</span>
+              <span class="leaderboards-item__points">60</span>
             </div>
           </li>
 
@@ -121,23 +122,19 @@
             </div>
             <div class="leaderboards-item__profile">
               <img src="http://placehold.it/250x250" class="leaderboards-item__icon" />
-              <span class="leaderboards-item__name">Jack Morrison</span>
+              <div class="leaderboards-item__profile-block">
+                <span class="leaderboards-item__name">Jack Morrison</span>
+                <div class="leaderboards-item__statistics">
+                  <span class="leaderboards-item__statistics-item">Played: <strong>3</strong></span>
+                  <span class="leaderboards-item__statistics-item">Last played: <strong>4 hours ago</strong></span>
+                </div>
+              </div>
             </div>
 
             <div class="leaderboards-item__score">
-              <span class="leaderboards-item__games"><span class="leaderboards-item__label">Games</span>17</span>
-              <span class="leaderboards-item__winrate"><span class="leaderboards-item__label">Winrate</span>65%</span>
-              <span class="leaderboards-item__points"><span class="leaderboards-item__label">Points</span>57</span>
-            </div>
-
-            <div class="leaderboards-item__actions">
-              <a class="leaderboards-item__trigger js-toggle-bubble"><div class="leaderboards-item__trigger-icon"></div></a>
-              <div class="leaderboards-item__bubble js-bubble">
-                <div class="leaderboards-item__bubble-content">
-                  <a href="#" class="leaderboards-item__action">View Profile</a>
-                  <a href="#" class="leaderboards-item__action">Request Duel</a>
-                </div>
-              </div>
+              <span class="leaderboards-item__games">17</span>
+              <span class="leaderboards-item__winrate">65%</span>
+              <span class="leaderboards-item__points">57</span>
             </div>
           </li>
         </ol>
