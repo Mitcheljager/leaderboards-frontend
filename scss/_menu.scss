@@ -43,7 +43,6 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     height: auto;
     width: 100%;
     max-width: 100vw;
@@ -52,6 +51,10 @@
     box-shadow: none;
     transform: translateX(0);
     transition: none;
+  }
+
+  @media (min-width: $tablet) and (max-width: $tablet + ($margin-medium * 2)) {
+    padding: 0 $margin-medium;
   }
 
   .menu--is-active & {
@@ -67,6 +70,26 @@
   padding: 0;
   margin: 0;
   position: relative;
+
+  @media (min-width: $tablet) {
+    margin: 0 $margin-medium 0 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--offset {
+    margin-left: $margin-medium 0 0 auto;
+    padding-top: $margin-medium;
+    border-top: 2px solid #fff;
+
+    @media (min-width: $tablet) {
+      margin: 0 0 0 auto;
+      padding-top: 0;
+      border-top: 0;
+    }
+  }
 }
 
 .menu__link {
