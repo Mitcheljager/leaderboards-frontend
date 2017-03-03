@@ -67,31 +67,69 @@
   &:nth-of-type(3)::before {
     @include iconMedal(#E65100);
   }
+}
 
-  &--match {
-    flex-grow: 1;
+.leaderboards-item--match { // Instead of giving each element a class, I chose to use child elements here, as it simplyfies classnames
+  flex-grow: 1;
 
-    &:first-of-type::before,
-    &:nth-of-type(2)::before,
-    &:nth-of-type(3)::before {
-      display: none;
-    }
+  &:first-of-type::before,
+  &:nth-of-type(2)::before,
+  &:nth-of-type(3)::before {
+    display: none;
+  }
 
-    &:nth-of-type(2)::before {
+  &:nth-of-type(2)::before {
+    display: block;
+    left: -14px;
+    content: 'vs';
+    line-height: 28px;
+    text-align: center;
+    color: #d7d7d7;
+    transform: translateY(-50%) translateX(0);
+    background: #fff;
+  }
+
+  .leaderboards-item__name {
+    display: none;
+
+    @media (min-width: $mobile-small) {
       display: block;
-      left: -14px;
-      content: 'vs';
-      line-height: 28px;
-      text-align: center;
-      color: #d7d7d7;
-      transform: translateY(-50%) translateX(0);
-      background: #fff;
     }
   }
 
-  &--reverse {
+  .leaderboards-item__score {
+    width: 40px;
+  }
+}
+
+.leaderboards-item--reverse { // Instead of giving each element a class, I chose to use child elements here, as it simplyfies classnames
+  flex-direction: row-reverse;
+  border-left: 1px solid #f5f5f5;
+
+  .leaderboards-item__profile {
     flex-direction: row-reverse;
-    border-left: 1px solid #f5f5f5;
+  }
+
+  .leaderboards-item__icon {
+    margin-right: 0;
+    margin-left: $margin-small;
+  }
+
+  .leaderboards-item__name {
+    text-align: right;
+  }
+
+  .leaderboards-item__score {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .leaderboards-item__games,
+  .leaderboards-item__winrate,
+  .leaderboards-item__points {
+    left: 0;
+    right: auto;
+    margin-left: 0;
   }
 }
 
@@ -112,10 +150,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  .leaderboards-item--reverse & {
-    flex-direction: row-reverse;
-  }
 }
 
 .leaderboards-item__icon {
@@ -123,11 +157,6 @@
   width: 60px;
   border-radius: 50%;
   margin-right: $margin-small;
-
-  .leaderboards-item--reverse & {
-    margin-right: 0;
-    margin-left: $margin-small;
-  }
 }
 
 .leaderboards-item__name {
@@ -168,11 +197,6 @@
   position: relative;
   width: 64px;
   overflow: hidden;
-
-  .leaderboards-item--reverse & {
-    margin-left: 0;
-    margin-right: auto;
-  }
 }
 
 .leaderboards-item__score-accent {
@@ -198,66 +222,6 @@
 
   @media (min-width: $mobile-small) {
     margin-left: $margin-large;
-  }
-
-  .leaderboards-item--reverse & {
-    left: 0;
-    right: auto;
-    margin-left: 0;
-  }
-}
-
-@keyframes fadeInBubble {
-  from {
-    left: 0px;
-    opacity: 0;
-  } to {
-    left: -10px;
-    opacity: 1;
-  }
-}
-
-.leaderboards-item__bubble {
-  position: absolute;
-  z-index: 50;
-  top: 50%;
-  left: -10px;
-  width: 140px;
-  padding: $margin-small;
-  height: auto;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.15), 0 3px 3px rgba(0,0,0,0.07);
-  background: #fff;
-  transform: translateY(-50%) translateX(-100%);
-  display: none;
-
-  &--is-active {
-    display: block;
-    animation: fadeInBubble 300ms;
-  }
-
-  &::after {
-    content: '\25b6';
-    display: block;
-    height: 18px;
-    width: 18px;
-    color: #fff;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.07);
-    position: absolute;
-    right: -17px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.leaderboards-item__action {
-  display: block;
-  text-decoration: none;
-  margin-bottom: 5px;
-  color: #000;
-  font-weight: 500;
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 
