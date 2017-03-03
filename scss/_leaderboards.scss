@@ -41,9 +41,6 @@
   position: relative;
   border-bottom: 1px solid #f5f5f5;
 
-  &--is-highlighted {
-  }
-
   &:first-of-type::before,
   &:nth-of-type(2)::before,
   &:nth-of-type(3)::before {
@@ -70,6 +67,32 @@
   &:nth-of-type(3)::before {
     @include iconMedal(#E65100);
   }
+
+  &--match {
+    flex-grow: 1;
+
+    &:first-of-type::before,
+    &:nth-of-type(2)::before,
+    &:nth-of-type(3)::before {
+      display: none;
+    }
+
+    &:nth-of-type(2)::before {
+      display: block;
+      left: -14px;
+      content: 'vs';
+      line-height: 28px;
+      text-align: center;
+      color: #d7d7d7;
+      transform: translateY(-50%) translateX(0);
+      background: #fff;
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+    border-left: 1px solid #f5f5f5;
+  }
 }
 
 // @for $i from 1 to 10 {
@@ -89,6 +112,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  .leaderboards-item--reverse & {
+    flex-direction: row-reverse;
+  }
 }
 
 .leaderboards-item__icon {
@@ -96,6 +123,11 @@
   width: 60px;
   border-radius: 50%;
   margin-right: $margin-small;
+
+  .leaderboards-item--reverse & {
+    margin-right: 0;
+    margin-left: $margin-small;
+  }
 }
 
 .leaderboards-item__name {
@@ -136,6 +168,11 @@
   position: relative;
   width: 64px;
   overflow: hidden;
+
+  .leaderboards-item--reverse & {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 .leaderboards-item__score-accent {
@@ -161,6 +198,12 @@
 
   @media (min-width: $mobile-small) {
     margin-left: $margin-large;
+  }
+
+  .leaderboards-item--reverse & {
+    left: 0;
+    right: auto;
+    margin-left: 0;
   }
 }
 
@@ -216,4 +259,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.leaderboards__match {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 100%;
 }
