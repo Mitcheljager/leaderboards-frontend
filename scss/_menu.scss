@@ -80,9 +80,9 @@
   }
 
   &--offset {
-    margin-left: $margin-medium 0 0 auto;
+    margin-left: 0;
     padding-top: $margin-medium;
-    border-top: 2px solid #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
 
     @media (min-width: $tablet) {
       margin: 0 0 0 auto;

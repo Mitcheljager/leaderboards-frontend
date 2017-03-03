@@ -1,0 +1,74 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $margin-medium;
+  padding: 0 $margin-medium;
+}
+
+.filter__title {
+  color: #d7d7d7;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 $margin-small 0 0;
+  padding: 0 $margin-small 0 0;
+  border-right: 1px solid #d7d7d7;
+  display: none;
+
+  @media (min-width: $mobile-small) {
+    display: block;
+  }
+}
+
+.filter__item {
+  color: #777;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &--is-active {
+    background: $style-color-alternative;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+// Leaderboards filter state
+
+@keyframes moveInFilteredItem {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveOutFilteredItem {
+  to {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+$leaderboard-item-types: 'points', 'games', 'winrate';
+
+@each $filter-name in $leaderboard-item-types {
+  .leaderboards__list--is-filtered-by-#{$filter-name} {
+    .leaderboards-item__#{$filter-name} {
+      animation: moveInFilteredItem 300ms 100ms forwards;
+    }
+  }
+
+  .leaderboards__list--is-moving-out-#{$filter-name} {
+    .leaderboards-item__#{$filter-name} {
+      transform: translateY(0);
+      opacity: 1;
+      animation: moveOutFilteredItem 300ms;
+    }
+  }
+}

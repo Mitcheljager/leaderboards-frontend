@@ -49,11 +49,14 @@
       <section class="leaderboards">
         <div class="leaderboards__header">
           <h1 class="leaderboards__title">Leaderboards</h1>
-          <div class="leaderboards__filter">
-
-          </div>
+          <nav class="filter js-filter">
+            <h4 class="filter__title">Sort</h4>
+            <a class="filter__item filter__item--is-active js-filter-item" data-target="points">Points</a>
+            <a class="filter__item js-filter-item" data-target="winrate">Winrate</a>
+            <a class="filter__item js-filter-item" data-target="games">Games Played</a>
+          </nav>
         </div>
-        <ol class="leaderboards__list">
+        <ol class="leaderboards__list js-leaderboards leaderboards__list--is-filtered-by-points">
           <li class="leaderboards-item leaderboards-item--is-highlighted">
             <div class="leaderboards-item__rank">
               1
@@ -71,7 +74,7 @@
 
             <div class="leaderboards-item__score">
               <span class="leaderboards-item__games">23</span>
-              <span class="leaderboards-item__winrate">65%</span>
+              <span class="leaderboards-item__winrate">65<i class="leaderboards-item__score-accent">%</i></span>
               <span class="leaderboards-item__points">75</span>
             </div>
           </li>
@@ -93,7 +96,7 @@
 
             <div class="leaderboards-item__score">
               <span class="leaderboards-item__games">67</span>
-              <span class="leaderboards-item__winrate">51%</span>
+              <span class="leaderboards-item__winrate">51<i class="leaderboards-item__score-accent">%</i></span>
               <span class="leaderboards-item__points">73</span>
             </div>
           </li>
@@ -115,7 +118,7 @@
 
             <div class="leaderboards-item__score">
               <span class="leaderboards-item__games">14</span>
-              <span class="leaderboards-item__winrate">47%</span>
+              <span class="leaderboards-item__winrate">47<i class="leaderboards-item__score-accent">%</i></span>
               <span class="leaderboards-item__points">60</span>
             </div>
           </li>
@@ -137,7 +140,7 @@
 
             <div class="leaderboards-item__score">
               <span class="leaderboards-item__games">17</span>
-              <span class="leaderboards-item__winrate">65%</span>
+              <span class="leaderboards-item__winrate">65<i class="leaderboards-item__score-accent">%</i></span>
               <span class="leaderboards-item__points">57</span>
             </div>
           </li>

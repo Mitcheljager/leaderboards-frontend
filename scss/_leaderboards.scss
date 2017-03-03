@@ -7,7 +7,7 @@
 }
 
 .leaderboards__title {
-  font-size: 33px;
+  font-size: 29px;
   margin: 0;
   padding: $margin-medium 0;
   text-align: center;
@@ -22,7 +22,7 @@
   }
 }
 
-.leaderboards__filter {
+.filter {
 
 }
 
@@ -96,11 +96,6 @@
   width: 60px;
   border-radius: 50%;
   margin-right: $margin-small;
-  display: none;
-
-  @media (min-width: $mobile-small) {
-    display: block;
-  }
 }
 
 .leaderboards-item__name {
@@ -114,6 +109,11 @@
   font-style: italic;
   color: #d7d7d7;
   margin-top: 5px;
+  display: none;
+
+  @media (min-width: $mobile-small) {
+    display: block;
+  }
 }
 
 .leaderboards-item__statistics-item {
@@ -131,9 +131,18 @@
 
 .leaderboards-item__score {
   margin-left: auto;
-  margin-right: $margin-small;
-  display: flex;
-  flex-direction: row;
+  display: block;
+  height: 32px;
+  position: relative;
+  width: 64px;
+  overflow: hidden;
+}
+
+.leaderboards-item__score-accent {
+  font-size: 18px;
+  color: #d7d7d7;
+  margin-left: 5px;
+  font-style: normal;
 }
 
 .leaderboards-item__games,
@@ -144,15 +153,15 @@
   font-size: 32px;
   line-height: 1em;
   margin-left: $margin-medium;
-  display: none;
+  transform: translateY(-100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
 
   @media (min-width: $mobile-small) {
     margin-left: $margin-large;
   }
-}
-
-.leaderboards-item__points {
-  display: block;
 }
 
 @keyframes fadeInBubble {
