@@ -399,12 +399,19 @@ img {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  margin-right: 15px; }
+  margin-right: 15px;
+  transition: opacity 100ms; }
+  .leaderboards-item__icon:active, .leaderboards-item__icon:hover {
+    opacity: 0.8; }
 
 .leaderboards-item__name {
   font-size: 16px;
   color: #F9A825;
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 100ms; }
+  .leaderboards-item__name:active, .leaderboards-item__name:hover {
+    color: #fbc66f; }
 
 .leaderboards-item__statistics {
   font-size: 14px;
