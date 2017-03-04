@@ -168,13 +168,13 @@
 
 .menu-trigger {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  display: block;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: $margin-medium;
   left: $margin-medium;
   z-index: 100;
-  display: block;
   transition: transform 600ms;
 
   @media (min-width: $tablet) {
@@ -195,18 +195,22 @@
   &--is-active,
   &--is-active:hover,
   &--is-active:active {
+    background: transparent;
     transform: rotate(90deg);
 
     .menu-trigger__icon {
       height: 0;
+      box-shadow: none;
     }
 
     .menu-trigger__icon::before {
       transform: rotate(45deg) translateX(13px) translateY(7px);
+      box-shadow: none;
     }
 
     .menu-trigger__icon::after {
       transform: rotate(-45deg) translateX(5px) translateY(1px);
+      box-shadow: none;
     }
   }
 }
@@ -221,9 +225,10 @@
   height: 4px;
   background: #fff;
   position: absolute;
-  transition: transform 200ms, background 200ms;
+  transition: transform 200ms, background 200ms, box-shadow 200ms 100ms;
   top: 12px;
   left: 0;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4), 0 0 10px rgba(0,0,0,0.07);
 }
 
 .menu-trigger__icon::before {

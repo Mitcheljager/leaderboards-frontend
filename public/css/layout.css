@@ -275,13 +275,13 @@ img {
 
 .menu-trigger {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  display: block;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 100;
-  display: block;
   transition: transform 600ms; }
   @media (min-width: 768px) {
     .menu-trigger {
@@ -291,13 +291,17 @@ img {
   .menu-trigger:hover .menu-trigger__icon::after, .menu-trigger:active .menu-trigger__icon::after {
     transform: translateY(2px); }
   .menu-trigger--is-active, .menu-trigger--is-active:hover, .menu-trigger--is-active:active {
+    background: transparent;
     transform: rotate(90deg); }
     .menu-trigger--is-active .menu-trigger__icon, .menu-trigger--is-active:hover .menu-trigger__icon, .menu-trigger--is-active:active .menu-trigger__icon {
-      height: 0; }
+      height: 0;
+      box-shadow: none; }
     .menu-trigger--is-active .menu-trigger__icon::before, .menu-trigger--is-active:hover .menu-trigger__icon::before, .menu-trigger--is-active:active .menu-trigger__icon::before {
-      transform: rotate(45deg) translateX(13px) translateY(7px); }
+      transform: rotate(45deg) translateX(13px) translateY(7px);
+      box-shadow: none; }
     .menu-trigger--is-active .menu-trigger__icon::after, .menu-trigger--is-active:hover .menu-trigger__icon::after, .menu-trigger--is-active:active .menu-trigger__icon::after {
-      transform: rotate(-45deg) translateX(5px) translateY(1px); }
+      transform: rotate(-45deg) translateX(5px) translateY(1px);
+      box-shadow: none; }
 
 .menu-trigger__icon,
 .menu-trigger__icon::before,
@@ -309,9 +313,10 @@ img {
   height: 4px;
   background: #fff;
   position: absolute;
-  transition: transform 200ms, background 200ms;
+  transition: transform 200ms, background 200ms, box-shadow 200ms 100ms;
   top: 12px;
-  left: 0; }
+  left: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.07); }
 
 .menu-trigger__icon::before {
   top: -8px; }
@@ -541,6 +546,18 @@ img {
     color: #fff; }
   .filter__item:last-of-type {
     margin-right: 0; }
+
+.filter__search {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #d7d7d7;
+  text-align: center;
+  font-size: 16px;
+  text-align: left;
+  transition: border-color 100ms; }
+  .filter__search:focus {
+    outline: 0;
+    border-color: #00695C; }
 
 @keyframes moveInFilteredItem {
   to {
