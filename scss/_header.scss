@@ -25,19 +25,32 @@
 .profile {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: $margin-large 0;
 }
 
+.profile__name {
+  flex: 1 100%;
+  margin: 0 0 $margin-medium;
+  padding: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+
 .profile__rank,
 .profile__points {
   font-size: 48px;
-  font-width: 200;
+  width: 75px;
   color: #fff;
+  text-align: right;
   margin-right: $margin-medium;
 
   @media (min-width: $mobile-small) {
+    width: 120px;
     font-size: 10vw;
     margin-right: $margin-large;
   }
@@ -47,9 +60,26 @@
   }
 }
 
+.profile__rank--gold {
+  color: transparent;
+  @include iconMedal(#FDD835);
+  background-size: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $mobile-small) {
+    background-size: 10vw;
+  }
+
+  @media (min-width: $tablet) {
+    background-size: 77px;
+  }
+}
+
 .profile__points {
   margin-left: $margin-medium;
   margin-right: 0;
+  text-align: left;
 
   @media (min-width: $mobile-small) {
     margin-left: $margin-large;

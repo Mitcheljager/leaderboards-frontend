@@ -71,6 +71,7 @@
 
 .leaderboards-item--match { // Instead of giving each element a class, I chose to use child elements here, as it simplyfies classnames
   flex-grow: 1;
+  flex: 50%;
 
   &:first-of-type::before,
   &:nth-of-type(2)::before,
