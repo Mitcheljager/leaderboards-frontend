@@ -465,6 +465,20 @@ img {
     .leaderboards-item__points {
       margin-left: 50px; } }
 
+.leaderboards-item__is-editable {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-bottom: 2px solid #d7d7d7;
+  text-align: center;
+  font-size: 32px;
+  text-align: center;
+  transition: border-color 100ms; }
+  .leaderboards-item__is-editable:focus {
+    outline: 0;
+    border-color: #00695C; }
+
 .leaderboards__match {
   display: flex;
   flex-direction: row;
