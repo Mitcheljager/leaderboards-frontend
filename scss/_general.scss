@@ -44,3 +44,32 @@ img {
 .content__title {
   padding: $margin-medium;
 }
+
+.medal {
+  width: 28px;
+  height: 28px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: $margin-small / 2;
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+  }
+
+  &--gold::before {
+    @include iconMedal(#FDD835);
+  }
+
+  &--silver::before {
+    @include iconMedal(#BDBDBD);
+  }
+
+  &--bronze::before {
+    @include iconMedal(#E65100);
+  }
+}

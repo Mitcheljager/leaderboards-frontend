@@ -36,14 +36,22 @@
   margin: 0 0 $margin-medium;
   padding: 0;
   text-align: center;
-  font-size: 32px;
+  font-size: $mobile-small * 0.04;
   font-weight: 500;
   color: #fff;
+
+  @media (min-width: $mobile-small) {
+    font-size: 4vw;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: $tablet * 0.04;
+  }
 }
 
 .profile__rank,
 .profile__points {
-  font-size: 48px;
+  font-size: $mobile-small * 0.1;
   width: 75px;
   color: #fff;
   text-align: right;
@@ -56,14 +64,14 @@
   }
 
   @media (min-width: $tablet) {
-    font-size: 77px;
+    font-size: $tablet * 0.1;
   }
 }
 
 .profile__rank--gold {
   color: transparent;
   @include iconMedal(#FDD835);
-  background-size: 48px;
+  background-size: $mobile-small * 0.1;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -72,7 +80,7 @@
   }
 
   @media (min-width: $tablet) {
-    background-size: 77px;
+    background-size: $tablet * 0.1;
   }
 }
 
