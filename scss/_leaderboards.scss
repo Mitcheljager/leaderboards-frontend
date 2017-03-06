@@ -23,10 +23,6 @@
   }
 }
 
-.filter {
-
-}
-
 .leaderboards__list {
   padding: 0;
   margin: 0;
@@ -48,12 +44,14 @@
   flex: 50%;
 
   &:nth-of-type(2)::before {
+    content: 'vs';
     display: block;
     position: absolute;
     width: 28px;
     height: 28px;
     left: -14px;
-    content: 'vs';
+    top: 50%;
+    transform: translateY(-50%);
     line-height: 28px;
     text-align: center;
     color: #d7d7d7;
@@ -223,6 +221,7 @@
   border-bottom: 2px solid #d7d7d7;
   text-align: center;
   font-size: 32px;
+  border-radius: 0;
   text-align: center;
   transition: border-color 100ms;
 
