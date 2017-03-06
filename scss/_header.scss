@@ -33,7 +33,7 @@
 
 .profile__name {
   flex: 1 100%;
-  margin: 0 0 $margin-medium;
+  margin: 0 0 $margin-small;
   padding: 0;
   text-align: center;
   font-size: $mobile-small * 0.04;
@@ -49,13 +49,20 @@
   }
 }
 
+.profile__medals {
+  flex: 1 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 $margin-large;
+}
+
 .profile__rank,
 .profile__points {
   font-size: $mobile-small * 0.1;
   width: 75px;
   color: #fff;
   text-align: right;
-  margin-right: $margin-medium;
+  margin-right: $margin-small;
 
   @media (min-width: $mobile-small) {
     width: 120px;
@@ -85,7 +92,7 @@
 }
 
 .profile__points {
-  margin-left: $margin-medium;
+  margin-left: $margin-small;
   margin-right: 0;
   text-align: left;
 

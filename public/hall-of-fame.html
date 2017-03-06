@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leaderboards</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,300,600,500,200" rel="stylesheet" type="text/css">
+
+  <link href="/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="/" class="menu__link">Leaderboards</a>
+          </li>
+          <li class="menu__item">
+            <a href="/upcoming-matches.html" class="menu__link menu__link">Upcoming Matches</a>
+          </li>
+          <li class="menu__item">
+            <a href="/match-history.html" class="menu__link menu__link">Match History</a>
+          </li>
+          <li class="menu__item">
+            <a href="/hall-of-fame.html" class="menu__link menu__link--is-active">Hall of Fame</a>
+          </li>
+
+          <li class="menu__item menu__item--offset">
+            <a href="/profile.html" class="menu__link">Account</a>
+          </li>
+        </ul>
+        <div class="menu__backdrop"></div>
+      </nav>
+
+      <div class="menu-trigger js-toggle-menu"><span class="menu-trigger__icon"></span></div>
+    </header>
+
+    <section class="content">
+      <section class="leaderboards">
+        <div class="leaderboards__header">
+          <h1 class="leaderboards__title">Hall of Fame</h1>
+        </div>
+
+        <ol class="leaderboards__list js-leaderboards leaderboards__list--is-filtered-by-points">
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-lena.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Lena Oxton</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--gold"></span>
+              <span class="medal medal--gold"></span>
+              <span class="medal medal--gold"></span>
+              <span class="medal medal--silver"></span>
+            </div>
+          </li>
+
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-fareeha.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Fareeha Amari</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--gold"></span>
+              <span class="medal medal--silver"></span>
+              <span class="medal medal--bronze"></span>
+            </div>
+          </li>
+
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-jack.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Jack Morrison</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--silver"></span>
+              <span class="medal medal--silver"></span>
+              <span class="medal medal--bronze"></span>
+              <span class="medal medal--bronze"></span>
+            </div>
+          </li>
+
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-hana.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Hana Song</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--gold"></span>
+              <span class="medal medal--bronze"></span>
+              <span class="medal medal--bronze"></span>
+            </div>
+          </li>
+
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-jesse.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Jesse Mccree</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--silver"></span>
+            </div>
+          </li>
+
+          <li class="leaderboards-item">
+            <div class="leaderboards-item__profile">
+              <a href="/profile.html">
+                <img src="/img/profile/profile-angela.jpg" class="leaderboards-item__icon" />
+              </a>
+
+              <div class="leaderboards-item__profile-block">
+                <a href="/profile.html" class="leaderboards-item__name">Angela Ziegler</a>
+              </div>
+            </div>
+
+            <div class="leaderboards-item__medals">
+              <span class="medal medal--bronze"></span>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </section>
+  </div>
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

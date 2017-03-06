@@ -111,7 +111,7 @@
 // }
 
 .leaderboards-item__rank {
-  width: 20px;
+  width: 28px;
   text-align: center;
   margin-right: $margin-small;
   color: #c7c7c7;
@@ -188,6 +188,12 @@
   color: #d7d7d7;
   margin-left: 5px;
   font-style: normal;
+}
+
+.leaderboards-item__medals {
+  margin-left: auto;
+  height: auto;
+  display: flex;
 }
 
 .leaderboards-item__games,

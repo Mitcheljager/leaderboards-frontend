@@ -48,28 +48,21 @@ img {
 .medal {
   width: 28px;
   height: 28px;
+  display: block;
+  background-position: center;
+  width: 28px;
+  height: 28px;
+  background-size: 100%;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: $margin-small / 2;
-    top: 50%;
-    transform: translateY(-50%) translateX(8px);
-    width: 28px;
-    height: 28px;
-    background-size: 100%;
-  }
-
-  &--gold::before {
+  &--gold {
     @include iconMedal(#FDD835);
   }
 
-  &--silver::before {
+  &--silver {
     @include iconMedal(#BDBDBD);
   }
 
-  &--bronze::before {
+  &--bronze {
     @include iconMedal(#E65100);
   }
 }
