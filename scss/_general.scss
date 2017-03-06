@@ -53,6 +53,7 @@ img {
   width: 28px;
   height: 28px;
   background-size: 100%;
+  position: relative;
 
   &--gold {
     @include iconMedal(#FDD835);
@@ -64,5 +65,52 @@ img {
 
   &--bronze {
     @include iconMedal(#E65100);
+  }
+
+  &:hover .medal__tooltip,
+  &:active .medal__tooltip,
+  &:focus .medal__tooltip {
+    display: block;
+  }
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-80%);
+  } to {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+  }
+}
+
+.medal__tooltip {
+  position: absolute;
+  min-width: 120px;
+  background: rgba(0,0,0,0.65);
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 10px;
+  top: -20px;
+  left: 50%;
+  line-height: 1.5em;
+  color: #fff;
+  opacity: 0;
+  display: none;
+  transform: translateX(-50%) translateY(-100%);
+  animation: fadeInTooltip 300ms forwards;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0,0,0,0.65);;
   }
 }
